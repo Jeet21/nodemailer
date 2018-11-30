@@ -6,12 +6,13 @@ var sendEmail = {
         sendEmail: function (req, res, next) {
             nodemailer.createTestAccount((err, account) => {
                 let transporter = nodemailer.createTransport({
-                    host: 'smtp.office365.com',
-                    port: 25,
+                    service : 'gmail',
+                    port: 587,
                     secure: false,
                     auth: {
-                        user: "support@compumatrice.com",
-                        pass: "15alov7r27##"
+						user: "patientportalcm@gmail.com",
+						pass: "aA@1234567"
+                        
                     },
                     tls: {
                         ciphers: 'SSLv3'
